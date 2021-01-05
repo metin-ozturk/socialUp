@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserNotificationList" customModule="socialUp" customModuleProvider="target">
+            <connections>
+                <outlet property="userNotificationLabel" destination="Q06-bX-nxG" id="geN-kE-XEQ"/>
+                <outlet property="userNotificationTableView" destination="mub-pB-Nhf" id="SNl-4T-C1D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Notifications:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q06-bX-nxG">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1VY-D3-KCq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mub-pB-Nhf">
+                    <rect key="frame" x="0.0" y="30" width="300" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Ks6-ws-Oao"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mub-pB-Nhf" secondAttribute="trailing" id="73D-F8-2YB"/>
+                <constraint firstItem="mub-pB-Nhf" firstAttribute="top" secondItem="Q06-bX-nxG" secondAttribute="bottom" id="GV5-rs-bQp"/>
+                <constraint firstItem="Q06-bX-nxG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KJk-ay-qCY"/>
+                <constraint firstItem="mub-pB-Nhf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UDR-yX-nSZ"/>
+                <constraint firstAttribute="trailing" secondItem="Q06-bX-nxG" secondAttribute="trailing" id="oCJ-Ft-8hM"/>
+                <constraint firstItem="Q06-bX-nxG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pZW-ge-9rj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+</document>

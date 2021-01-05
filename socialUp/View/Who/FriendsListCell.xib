@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsListTableViewReuseIdentifier" id="KGk-i7-Jjw" customClass="FriendsListCell" customModule="socialUp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-T7-VUT">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="acO-jr-VRj"/>
+                            <constraint firstAttribute="width" constant="60" id="cQ6-HA-g1s"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2B-2n-NUn">
+                        <rect key="frame" x="60" y="0.0" width="42" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="rMC-pw-6pH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="z2B-2n-NUn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CzJ-k1-Z3p"/>
+                    <constraint firstItem="wIg-T7-VUT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RFY-A6-cC1"/>
+                    <constraint firstAttribute="bottom" secondItem="z2B-2n-NUn" secondAttribute="bottom" id="UJs-nb-pIw"/>
+                    <constraint firstItem="z2B-2n-NUn" firstAttribute="leading" secondItem="wIg-T7-VUT" secondAttribute="trailing" id="WSD-gr-0ea"/>
+                    <constraint firstItem="wIg-T7-VUT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oc9-E1-RDn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="friendNameLabel" destination="z2B-2n-NUn" id="3Iw-Sp-Cpq"/>
+                <outlet property="friendProfileImageView" destination="wIg-T7-VUT" id="nD6-g1-kNB"/>
+                <outlet property="friendProfileImageViewWidthConstraint" destination="cQ6-HA-g1s" id="2f4-YK-v8j"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="imagePlaceholder" width="500" height="500"/>
+    </resources>
+</document>

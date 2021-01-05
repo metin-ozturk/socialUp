@@ -1,0 +1,6 @@
+framework module Pods_socialUp {
+  umbrella header "Pods-socialUp-umbrella.h"
+
+  export *
+  module * { export * }
+}

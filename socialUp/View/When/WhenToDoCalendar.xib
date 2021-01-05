@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WhenToDoCalendar" customModule="socialUp" customModuleProvider="target">
+            <connections>
+                <outlet property="futureButton" destination="rEO-Px-oal" id="Yff-f6-6AV"/>
+                <outlet property="monthAndYearLabel" destination="ppT-ry-Ewy" id="oB9-rR-fkl"/>
+                <outlet property="pastButton" destination="y9z-Ps-Nsq" id="QDb-Ku-GbS"/>
+                <outlet property="whenToDoCalendar" destination="5ph-Xm-WBt" id="ANh-o0-9vU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month And Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppT-ry-Ewy">
+                    <rect key="frame" x="126" y="5" width="123" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4L7-iu-ZqU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9z-Ps-Nsq">
+                    <rect key="frame" x="81" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="L9S-hc-SX0"/>
+                        <constraint firstAttribute="height" constant="40" id="px2-rD-gQR"/>
+                    </constraints>
+                    <state key="normal" image="pastArrow"/>
+                    <connections>
+                        <action selector="goToPast:" destination="-1" eventType="touchUpInside" id="Dx8-4l-oHC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEO-Px-oal">
+                    <rect key="frame" x="254" y="5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="2Xg-Nz-5ue"/>
+                        <constraint firstAttribute="height" constant="40" id="FbN-Wj-JCd"/>
+                    </constraints>
+                    <state key="normal" image="futureArrow"/>
+                    <connections>
+                        <action selector="goToFuture:" destination="-1" eventType="touchUpInside" id="BGN-6P-yOz"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5ph-Xm-WBt">
+                    <rect key="frame" x="0.0" y="65" width="375" height="375"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="375" id="RqG-Am-IZL"/>
+                        <constraint firstAttribute="width" constant="375" id="e8G-lw-aKq"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OqU-O2-sY8">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ppT-ry-Ewy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="48X-ue-Ovs"/>
+                <constraint firstItem="ppT-ry-Ewy" firstAttribute="leading" secondItem="y9z-Ps-Nsq" secondAttribute="trailing" constant="5" id="5mT-ps-6Y2"/>
+                <constraint firstItem="rEO-Px-oal" firstAttribute="leading" secondItem="ppT-ry-Ewy" secondAttribute="trailing" constant="5" id="BBu-g2-i3A"/>
+                <constraint firstItem="rEO-Px-oal" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="FDS-lC-zgq"/>
+                <constraint firstItem="5ph-Xm-WBt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="I0W-kC-4m2"/>
+                <constraint firstItem="y9z-Ps-Nsq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="YQF-Wl-KOy"/>
+                <constraint firstItem="ppT-ry-Ewy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gtQ-8b-jRR"/>
+                <constraint firstItem="5ph-Xm-WBt" firstAttribute="top" secondItem="ppT-ry-Ewy" secondAttribute="bottom" constant="20" id="py8-Bv-EuL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="futureArrow" width="600" height="560"/>
+        <image name="pastArrow" width="600" height="560"/>
+    </resources>
+</document>
